@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080808">
+  <title>Birthday Surprise for THOHEER (#JI)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="starField"></div>
+  <canvas id="confetti"></canvas>
+
+  <audio id="birthdayMusic"
+    src="soulprodmusic-happy-birthday-piano-508359.mp3"
+    loop preload="none"></audio>
+
+  <button id="musicButton" class="music-button" type="button">
+    ♫ Play Music
+  </button>
+
+  <main>
+    <!-- PAGE 1: WELCOME -->
+    <section class="screen active" id="page1">
+      <div class="content">
+        <p class="eyebrow">A SPECIAL SURPRISE FOR</p>
+        <h1 class="gold-title" id="friendName">THOHEER (#JI)</h1>
+        <p class="subtitle">Someone special has a surprise for you...</p>
+        <div class="gold-line"></div>
+        <p class="small-text">A little surprise made just for you ❤️</p>
+
+        <button class="next-button" data-next="1" type="button">
+          ✨ TAP HERE TO BEGIN ✨
+        </button>
+      </div>
+    </section>
+
+    <!-- PAGE 2: MYSTERY -->
+    <section class="screen" id="page2">
+      <div class="content">
+        <div class="big-emoji">🎁</div>
+        <p class="eyebrow">HEY, THOHEER!</p>
+        <h2 class="gold-title">Something Special Awaits</h2>
+        <p class="message">
+          Today isn't just another day. It's a chance to celebrate
+          an amazing person and the memories we've shared.
+        </p>
+        <p class="highlight">Are you ready for your surprise?</p>
+
+        <button class="next-button" data-next="2" type="button">
+          💫 YES, SHOW ME MORE
+        </button>
+        <button class="back-button" data-back="0" type="button">
+          ← Go Back
+        </button>
+      </div>
+    </section>
+
+    <!-- PAGE 3: COUNTDOWN -->
+    <section class="screen" id="page3">
+      <div class="content">
+        <p class="eyebrow">THE SPECIAL DAY</p>
+        <h2 class="gold-title">The Countdown Begins</h2>
+        <p class="message">Counting every moment until your birthday!</p>
+
+        <div class="countdown">
+          <div class="time-box">
+            <span id="days">00</span>
+            <small>Days</small>
+          </div>
+          <div class="time-box">
+            <span id="hours">00</span>
+            <small>Hours</small>
+          </div>
+          <div class="time-box">
+            <span id="minutes">00</span>
+            <small>Minutes</small>
+          </div>
+          <div class="time-box">
+            <span id="seconds">00</span>
+            <small>Seconds</small>
+          </div>
+        </div>
+
+        <p id="countdownNote" class="small-text"></p>
+
+        <button class="next-button" data-next="3" type="button">
+          🎂 CONTINUE THE SURPRISE
+        </button>
+        <button class="back-button" data-back="1" type="button">
+          ← Go Back
+        </button>
+      </div>
+    </section>
+
+    <!-- PAGE 4: MEMORIES -->
+    <section class="screen" id="page4">
+      <div class="content wide-content">
+        <p class="eyebrow">OUR JOURNEY</p>
+        <h2 class="gold-title">Memories That Matter</h2>
+        <p class="message">
+          Every memory has a story. Every laugh makes it special.
+          Here's to all the good times and the memories still to come.
+        </p>
+
+        <div class="gallery">
+          <div class="media-card">
+            <img
+              src="WhatsApp Image 2026-10-25 at 5.30.34 PM.jpeg"
+              alt="A special friendship memory">
+            <p>One for the memories ❤️</p>
+          </div>
+
+          <div class="media-card">
+            <video controls playsinline preload="metadata">
+              <source
+                src="WhatsApp Video 2026-10-26 at 10.33.35 AM.mp4"
+                type="video/mp4">
+              Your browser does not support this video.
+            </video>
+            <p>Our friendship moments</p>
+          </div>
+
+          <div class="media-card">
+            <video controls playsinline preload="metadata">
+              <source
+                src="WhatsApp Video 2026-10-26 at 7.59.42 PM.mp4"
+                type="video/mp4">
+              Your browser does not support this video.
+            </video>
+            <p>A little surprise for you 🎉</p>
+          </div>
+        </div>
+
+        <button class="next-button" data-next="4" type="button">
+          💛 NEXT: A MESSAGE FOR YOU
+        </button>
+        <button class="back-button" data-back="2" type="button">
+          ← Go Back
+        </button>
+      </div>
+    </section>
+
+    <!-- PAGE 5: BIRTHDAY LETTER -->
+    <section class="screen" id="page5">
+      <div class="content">
+        <p class="eyebrow">FROM A FRIEND</p>
+        <h2 class="gold-title">A Little Birthday Message</h2>
+
+        <div class="letter">
+          <p>Dear THOHEER (#JI),</p>
+
+          <p>
+            Happy Birthday! 🎉 I hope your special day brings you
+            happiness, laughter, new opportunities, and unforgettable memories.
+          </p>
+
+          <p>
+            Thank you for being part of my journey. May the year ahead
+            bring you success, peace, and plenty of reasons to smile.
+          </p>
+
+          <p>
+            Keep being yourself, keep chasing your dreams,
+            and never stop creating wonderful memories.
+          </p>
+
+          <p class="signature">With best wishes ❤️</p>
+        </div>
+
+        <button class="next-button" data-next="5" type="button">
+          🎂 LET'S CELEBRATE!
+        </button>
+        <button class="back-button" data-back="3" type="button">
+          ← Go Back
+        </button>
+      </div>
+    </section>
+
+    <!-- PAGE 6: FINAL CELEBRATION -->
+    <section class="screen" id="page6">
+      <div class="content">
+        <p class="eyebrow">YOUR SPECIAL MOMENT</p>
+        <h1 class="gold-title" id="finalMessage">
+          HAPPY BIRTHDAY, THOHEER (#JI)!
+        </h1>
+
+        <div class="cake" id="cakeButton"
+          role="button" tabindex="0"
+          aria-label="Blow out the birthday cake candles">
+          <div class="flames" aria-hidden="true">
+            <span class="flame">🔥</span>
+            <span class="flame">🔥</span>
+            <span class="flame">🔥</span>
+          </div>
+          <div class="candles">│　│　│</div>
+          <div class="cake-top"></div>
+          <div class="cake-middle"></div>
+          <div class="cake-bottom"></div>
+        </div>
+
+        <p id="cakeMessage" class="highlight">
+          Tap the cake to blow out the candles and make a wish! ✨
+        </p>
+
+        <button class="next-button" id="celebrateButton" type="button">
+          🎉 CELEBRATE AGAIN 🎉
+        </button>
+
+        <button class="back-button" data-back="4" type="button">
+          ← Read the message again
+        </button>
+
+        <p class="small-text">Made with friendship and good wishes ❤️</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
